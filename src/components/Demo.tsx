@@ -59,20 +59,20 @@ export const Demo = function () {
       <div>{!!error && <h4 style={{ marginTop: "1rem", marginBottom: "0" }}>{getErrorMessage(error)}</h4>}</div>
       <div className="grid grid-cols-2 gap-2 py-4 px-2">
         <div className="card bordered">
-          <figure>
+          {/* <figure>
             <img
               className="h-24"
               src="https://images.ctfassets.net/9sy2a0egs6zh/4zJfzJbG3kTDSk5Wo4RJI1/1b363263141cf629b28155e2625b56c9/mm-logo.svg"
               alt="metamask"
             />
-          </figure>
+          </figure> */}
           <div className="card-body">
-            <h2 className="card-title">
+            {/* <h2 className="card-title">
               <a className="link link-hover" href="https://metamask.io/" target="_blank" rel="noreferrer">
                 MetaMask
               </a>
             </h2>
-            <p>A crypto wallet & gateway to blockchain apps</p>
+            <p>A crypto wallet & gateway to blockchain apps</p> */}
             <div className="justify-end card-actions">
               <button
                 type="button"
@@ -132,20 +132,20 @@ export const Demo = function () {
           </div>
         </div>
         <div className="card bordered">
-          <figure>
+          {/* <figure>
             <img
               className="h-24"
               src="https://docs.walletconnect.com/img/walletconnect-logo.svg"
               alt="wallet connect"
             />
-          </figure>
+          </figure> */}
           <div className="card-body">
-            <h2 className="card-title">
+            {/* <h2 className="card-title">
               <a className="link link-hover" href="https://walletconnect.org/" target="_blank" rel="noreferrer">
                 Wallet Connect
               </a>
             </h2>
-            <p>Open protocol for connecting Wallets to Dapps</p>
+            <p>Open protocol for connecting Wallets to Dapps</p> */}
             <div className="justify-end card-actions">
               <button
                 type="button"

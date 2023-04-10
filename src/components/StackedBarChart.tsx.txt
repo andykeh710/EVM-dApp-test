@@ -1,0 +1,45 @@
+import React, { useState, useEffect } from "react";
+import { Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart } from "recharts";
+
+const StackedBarChart = ({ data }) => {
+  const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    const formatData = data.map(item => ({
+      date: item.date,
+      sentiment: item.sentiment,
+      day_1: item.day_1,
+      day_2: item.day_2,
+      day_3: item.day_3,
+      day_4: item.day_4
+    }));
+    setChartData(formatData);
+  }, [data]);
+
+  return (
+    <BarChart
+      width={600}
+      height={300}
+      data={chartData}
+      margin={{
+        top: 20,
+        right: 30,
+        left: 20,
+        bottom: 5
+      }}
+      stackOffset="expand"
+    >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="date" />
+      <YAxis />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey="day_1" stackId="a" fill="#8884d8" />
+      <Bar dataKey="day_2" stackId="a" fill="#82ca9d" />
+      <Bar dataKey="day_3" stackId="a" fill="#ffc658" />
+      <Bar dataKey="day_4" stackId="a" fill="#ff7300" />
+    </BarChart>
+  );
+};
+
+export default StackedBarChart;
